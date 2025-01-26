@@ -1,0 +1,67 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "b-blocks/bpl-test-plugin",
+  "version": "1.0.0",
+  "title": "Bpl Test Plugin",
+  "category": "widgets",
+  "description": "Short description of the Bpl-test-plugin",
+  "keywords": [
+    "bpl, test, plugin"
+  ],
+  "textdomain": "b-blocks",
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "boxValues": {
+      "type": "object",
+      "default": {
+        "top": "40px",
+        "right": "40px",
+        "bottom": "40px",
+        "left": "40px"
+      }
+    },
+    "option": {
+      "type": "object",
+      "default": {
+        "color": "#FF6600"
+      }
+    },
+    "textColor": {
+      "type": "object",
+      "default": {
+        "color": "#000000",
+        "hexColor": "#6600FF"
+      }
+    },
+    "colors": {
+      "type": "object",
+      "default": {
+        "color": "#69df1f",
+        "bg": "#DC4C64"
+      }
+    },
+    "cssCode": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
