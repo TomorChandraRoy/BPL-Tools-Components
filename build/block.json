@@ -47,6 +47,24 @@
     "cssCode": {
       "type": "string",
       "default": ""
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "desktop": 3,
+        "tablet": 2,
+        "mobile": 1
+      }
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "width": "1px",
+        "style": "solid",
+        "color": "#000000",
+        "side": "all",
+        "radius": "5px"
+      }
     }
   },
   "supports": {
