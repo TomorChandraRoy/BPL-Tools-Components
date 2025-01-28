@@ -1,10 +1,16 @@
 import React from 'react';
 
-const BPLComponents = ({attributes}) => {
+const BPLComponents = ({ attributes }) => {
 
-  const {cssCode}=attributes;
-  console.log(cssCode);
-  
+  const { cssCode } = attributes;
+
+
+
+
+  // #Gradient Components Start
+
+
+  //##Gradient Components End
 
   return (
     <div>
@@ -16,8 +22,18 @@ const BPLComponents = ({attributes}) => {
         </p>
         <button className='btn'>Color/BGColor</button>
         <button className='colorBG'>RIPON</button>
+
+
+        <div>
+          <h2>Typography </h2>
+          <div className='typo'>
+          Distinctively facilitate compelling technology vis-a-vis worldwide ideas.
+          Credibly synthesize top-line solutions before corporate expertise.
+          </div>
+        </div>
       </div>
       <p>{cssCode}</p>
+
     </div>
 
 

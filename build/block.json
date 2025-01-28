@@ -15,6 +15,14 @@
       "type": "string",
       "default": "center"
     },
+    "width": {
+      "type": "object",
+      "default": {
+        "desktop": "600px",
+        "tablet": "400px",
+        "mobile": "200px"
+      }
+    },
     "boxValues": {
       "type": "object",
       "default": {
@@ -64,6 +72,20 @@
         "color": "#000000",
         "side": "all",
         "radius": "5px"
+      }
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "typography": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 20,
+          "tablet": 14,
+          "mobile": 12
+        }
       }
     }
   },

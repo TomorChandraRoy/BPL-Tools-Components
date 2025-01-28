@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		createRoot(blockNameEl).render(<>
 			<Style attributes={attributes} id={blockNameEl.id} />
+			
 			<BPLComponents attributes={attributes}/>
 		</>);
 
