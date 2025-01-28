@@ -10,6 +10,7 @@ import {
   Device,
   HexColorControl,
   Label,
+  SelectPureControl,
   SeparatorControl,
   ShadowControl,
   SolidBackground,
@@ -27,7 +28,7 @@ import { updateData } from "../../../../../../bpl-tools/utils/functions";
 
 const Style = ({ attributes, setAttributes, device }) => {
 
-  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography, items, backgroundColor, shadow, Separator } = attributes;
+  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography, items, backgroundColor, shadow, Separator,selectedOptions, availableOptions } = attributes;
 
 console.log(Separator);
 
@@ -294,10 +295,15 @@ console.log(Separator);
 
         <PanelBody
           className="bPlPanelBody"
-          title={__("ShadowControl Components", "b-blocks")}
+          title={__("SelectPureControl Components", "b-blocks")}
           initialOpen={false}
         >
-
+          <SelectPureControl
+            label="Select Options"
+            value={selectedOptions}
+            onChange={(value)=>{setAttributes({ selectedOptions: value })}}
+            options={availableOptions}
+          />
 
         </PanelBody>
 

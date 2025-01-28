@@ -21,7 +21,8 @@ const BPLComponents = ({
 }) => {
   const {
     cssCode,
-    items
+    items,
+    selectedOptions
   } = attributes;
 
   // #Gradient Components Start
@@ -44,7 +45,7 @@ const BPLComponents = ({
     className: "ShadowControl"
   }, "Quickly empower multifunctional schemas and client-centered products."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "SeparatorControl :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "SeparatorControl"
-  }, "Quickly empower multifunctional schemas and client-centered products.")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, cssCode));
+  }, "Quickly empower multifunctional schemas and client-centered products."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Selected Options:"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("pre", null, JSON.stringify(selectedOptions, null, 2))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, cssCode));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BPLComponents);
 

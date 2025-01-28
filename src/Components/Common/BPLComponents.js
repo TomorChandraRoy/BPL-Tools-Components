@@ -2,7 +2,7 @@ import React from 'react';
 
 const BPLComponents = ({ attributes }) => {
 
-  const { cssCode, items } = attributes;
+  const { cssCode, items,selectedOptions } = attributes;
 
 
 
@@ -55,7 +55,11 @@ const BPLComponents = ({ attributes }) => {
              Quickly empower multifunctional schemas and client-centered products.
           </div>
 
+
+        <h3>Selected Options:</h3>
+        <pre>{JSON.stringify(selectedOptions, null, 2)}</pre>
       </div>
+  
       <p>{cssCode}</p>
 
     </div>
