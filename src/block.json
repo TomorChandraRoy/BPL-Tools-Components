@@ -78,6 +78,27 @@
       "type": "string",
       "default": ""
     },
+    "shadow": {
+      "type": "array",
+      "default": [
+        {
+          "hOffset": "0px",
+          "vOffset": "0px",
+          "blur": "4px",
+          "spreed": "5px",
+          "color": "#7090b0",
+          "isInset": false
+        }
+      ]
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#d5d8dc"
+    },
+    "items": {
+      "type": "array",
+      "default": ["Item 1", "Item 2", "Item 3"]
+    },
     "typography": {
       "type": "object",
       "default": {

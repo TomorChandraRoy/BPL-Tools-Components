@@ -1,7 +1,7 @@
 import { getTypoCSS } from '../../../../bpl-tools/utils/getCSS';
 
 const Style = ({ attributes, id, device = "desktop" }) => {
-  const { boxValues, option, textColor, colors, border, width, typography } =
+  const { boxValues, option, textColor, colors, border, width, typography,backgroundColor,shadow } =
     attributes;
 
   const { fontFamily, fontCategory, fontSize, fontVariant, fontWeight, textDecoration, textTransform, fontStyle, letterSpace,lineHeight} = typography
@@ -50,6 +50,8 @@ const Style = ({ attributes, id, device = "desktop" }) => {
   const mainSl = `#${id}`;
   const blockSl = `${mainSl} .bBlocksTestPurpose`;
   const typogra = `${blockSl} .typo`;
+  const SolidBackg = `${blockSl} .SolidBackground`;
+  const ShadowContro = `${blockSl} .ShadowControl`;
 
   return (
     <style
@@ -97,6 +99,15 @@ const Style = ({ attributes, id, device = "desktop" }) => {
             margin-left: 10px;
             background-color: ${colors?.bg};
           }
+          ${SolidBackg}{
+           background-color:${backgroundColor};
+           padding:20px;
+          }
+          ${ShadowContro}{
+            box-shadow: ${shadow.map(s => `${s.hOffset} ${s.vOffset} ${s.blur} ${s.spreed} ${s.color}`).join(', ')};
+            padding: 20px;
+          }
+          }
             ${typogra} {
                font-family:${fontFamily},${fontCategory};
                font-size:${fontSize[device]}px;
@@ -107,6 +118,9 @@ const Style = ({ attributes, id, device = "desktop" }) => {
                letter-spacing: ${letterSpace};
                font-variant: ${fontVariant};
                line-height: ${lineHeight};
+               background-color: rgba(255, 99, 71, 0.6);
+               padding: 20px;
+
             }
             @media only screen and (min-width: 641px) and (max-width: 1024px) {
              ${typogra} {

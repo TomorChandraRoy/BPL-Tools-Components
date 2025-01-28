@@ -10,6 +10,9 @@ import {
   Device,
   HexColorControl,
   Label,
+  ShadowControl,
+  SolidBackground,
+  SortableControl,
   Typography,
 } from "../../../../../../bpl-tools/Components";
 import { BDevice, BorderControl, ChangeImageData, ImageEditControl, ImageHolderControl, ImagePlaceholder } from "../../../../../../bpl-tools/Components/Deprecated";
@@ -23,9 +26,7 @@ import { updateData } from "../../../../../../bpl-tools/utils/functions";
 
 const Style = ({ attributes, setAttributes, device }) => {
 
-  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography } = attributes;
-
-
+  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography, items, backgroundColor,shadow } = attributes;
 
 
   const resetValues = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -234,33 +235,44 @@ const Style = ({ attributes, setAttributes, device }) => {
           initialOpen={false}
         >
           <Typography label={__('Label', 'b-blocks')} value={typography} onChange={val => setAttributes({ typography: val })}
-            defaults={{fontSize: 16}}
           />
 
         </PanelBody>
 
         <PanelBody
           className="bPlPanelBody"
-          title={__("ImageControl Components", "b-blocks")}
+          title={__("SortableControl Components", "b-blocks")}
           initialOpen={false}
         >
-
+          <SortableControl
+            label="Sort items:"
+            value={items}
+            onChange={item => setAttributes({ items: item })}
+          />
         </PanelBody>
 
         <PanelBody
           className="bPlPanelBody"
-          title={__("ImageControl Components", "b-blocks")}
+          title={__("SolidBackground Components", "b-blocks")}
           initialOpen={false}
         >
-
+            <SolidBackground
+              label="Background Color"
+              value={backgroundColor}
+              onChange={(value) => setAttributes({ backgroundColor: value })}
+            />
         </PanelBody>
 
         <PanelBody
           className="bPlPanelBody"
-          title={__("ImageControl Components", "b-blocks")}
+          title={__("ShadowControl Components", "b-blocks")}
           initialOpen={false}
         >
-
+            <ShadowControl
+              label="Shadow"
+              value={shadow}
+              onChange={(shado)=>setAttributes({shadow:shado})}
+            />
         </PanelBody>
 
       </PanelBody>

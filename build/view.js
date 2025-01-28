@@ -20,7 +20,8 @@ const BPLComponents = ({
   attributes
 }) => {
   const {
-    cssCode
+    cssCode,
+    items
   } = attributes;
 
   // #Gradient Components Start
@@ -33,9 +34,15 @@ const BPLComponents = ({
     className: "btn"
   }, "Color/BGColor"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "colorBG"
-  }, "RIPON"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Typography "), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, "RIPON"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "Typography :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "typo"
-  }, "Distinctively facilitate compelling technology vis-a-vis worldwide ideas. Credibly synthesize top-line solutions before corporate expertise."))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, cssCode));
+  }, "Distinctively facilitate compelling technology vis-a-vis worldwide ideas. Credibly synthesize top-line solutions before corporate expertise.")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Drag and drop/ SortableControl :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, items.map((item, index) => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    key: index
+  }, item))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "SolidBackground :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "SolidBackground"
+  }, "Quickly empower multifunctional schemas and client-centered products."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "ShadowControl :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "ShadowControl"
+  }, "Quickly empower multifunctional schemas and client-centered products.")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, cssCode));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BPLComponents);
 
@@ -68,7 +75,9 @@ const Style = ({
     colors,
     border,
     width,
-    typography
+    typography,
+    backgroundColor,
+    shadow
   } = attributes;
   const {
     fontFamily,
@@ -115,6 +124,8 @@ const Style = ({
   const mainSl = `#${id}`;
   const blockSl = `${mainSl} .bBlocksTestPurpose`;
   const typogra = `${blockSl} .typo`;
+  const SolidBackg = `${blockSl} .SolidBackground`;
+  const ShadowContro = `${blockSl} .ShadowControl`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
@@ -159,6 +170,15 @@ const Style = ({
             margin-left: 10px;
             background-color: ${colors?.bg};
           }
+          ${SolidBackg}{
+           background-color:${backgroundColor};
+           padding:20px;
+          }
+          ${ShadowContro}{
+            box-shadow: ${shadow.map(s => `${s.hOffset} ${s.vOffset} ${s.blur} ${s.spreed} ${s.color}`).join(', ')};
+            padding: 20px;
+          }
+          }
             ${typogra} {
                font-family:${fontFamily},${fontCategory};
                font-size:${fontSize[device]}px;
@@ -169,6 +189,9 @@ const Style = ({
                letter-spacing: ${letterSpace};
                font-variant: ${fontVariant};
                line-height: ${lineHeight};
+               background-color: rgba(255, 99, 71, 0.6);
+               padding: 20px;
+
             }
             @media only screen and (min-width: 641px) and (max-width: 1024px) {
              ${typogra} {
