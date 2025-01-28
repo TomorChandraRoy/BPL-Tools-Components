@@ -78,6 +78,15 @@
       "type": "string",
       "default": ""
     },
+    "Separator": {
+      "type": "object",
+      "default": {
+        "width": "50%",
+        "height": "170px",
+        "style": "solid",
+        "color": "#1556bf"
+      }
+    },
     "shadow": {
       "type": "array",
       "default": [

@@ -1,11 +1,14 @@
 import { getTypoCSS } from '../../../../bpl-tools/utils/getCSS';
 
 const Style = ({ attributes, id, device = "desktop" }) => {
-  const { boxValues, option, textColor, colors, border, width, typography,backgroundColor,shadow } =
+  const { boxValues, option, textColor, colors, border, width, typography,backgroundColor,shadow, Separator } =
     attributes;
 
+
+    
+
   const { fontFamily, fontCategory, fontSize, fontVariant, fontWeight, textDecoration, textTransform, fontStyle, letterSpace,lineHeight} = typography
-  console.log(typography);
+  
 
 
 
@@ -52,6 +55,7 @@ const Style = ({ attributes, id, device = "desktop" }) => {
   const typogra = `${blockSl} .typo`;
   const SolidBackg = `${blockSl} .SolidBackground`;
   const ShadowContro = `${blockSl} .ShadowControl`;
+  const SeparatorContro = `${blockSl} .SeparatorControl`;
 
   return (
     <style
@@ -99,9 +103,17 @@ const Style = ({ attributes, id, device = "desktop" }) => {
             margin-left: 10px;
             background-color: ${colors?.bg};
           }
+          
           ${SolidBackg}{
            background-color:${backgroundColor};
            padding:20px;
+          }
+          ${SeparatorContro}{
+            width:${Separator.width};
+            height:${Separator.height};
+            border-style: ${Separator.style};
+            background-color: ${Separator.color};
+            padding: 20px;
           }
           ${ShadowContro}{
             box-shadow: ${shadow.map(s => `${s.hOffset} ${s.vOffset} ${s.blur} ${s.spreed} ${s.color}`).join(', ')};

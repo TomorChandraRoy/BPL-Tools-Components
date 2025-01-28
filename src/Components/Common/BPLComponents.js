@@ -50,6 +50,11 @@ const BPLComponents = ({ attributes }) => {
              Quickly empower multifunctional schemas and client-centered products.
           </div>
 
+          <h2>SeparatorControl :</h2>
+          <div className='SeparatorControl'>
+             Quickly empower multifunctional schemas and client-centered products.
+          </div>
+
       </div>
       <p>{cssCode}</p>
 

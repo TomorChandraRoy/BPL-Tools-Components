@@ -42,6 +42,8 @@ const BPLComponents = ({
     className: "SolidBackground"
   }, "Quickly empower multifunctional schemas and client-centered products."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "ShadowControl :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "ShadowControl"
+  }, "Quickly empower multifunctional schemas and client-centered products."), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, "SeparatorControl :"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "SeparatorControl"
   }, "Quickly empower multifunctional schemas and client-centered products.")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, cssCode));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BPLComponents);
@@ -77,7 +79,8 @@ const Style = ({
     width,
     typography,
     backgroundColor,
-    shadow
+    shadow,
+    Separator
   } = attributes;
   const {
     fontFamily,
@@ -91,7 +94,6 @@ const Style = ({
     letterSpace,
     lineHeight
   } = typography;
-  console.log(typography);
 
   // #BorderControl Components Start
   let borderStyle = "";
@@ -126,6 +128,7 @@ const Style = ({
   const typogra = `${blockSl} .typo`;
   const SolidBackg = `${blockSl} .SolidBackground`;
   const ShadowContro = `${blockSl} .ShadowControl`;
+  const SeparatorContro = `${blockSl} .SeparatorControl`;
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", {
     dangerouslySetInnerHTML: {
       __html: `
@@ -170,9 +173,17 @@ const Style = ({
             margin-left: 10px;
             background-color: ${colors?.bg};
           }
+          
           ${SolidBackg}{
            background-color:${backgroundColor};
            padding:20px;
+          }
+          ${SeparatorContro}{
+            width:${Separator.width};
+            height:${Separator.height};
+            border-style: ${Separator.style};
+            background-color: ${Separator.color};
+            padding: 20px;
           }
           ${ShadowContro}{
             box-shadow: ${shadow.map(s => `${s.hOffset} ${s.vOffset} ${s.blur} ${s.spreed} ${s.color}`).join(', ')};

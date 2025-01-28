@@ -10,6 +10,7 @@ import {
   Device,
   HexColorControl,
   Label,
+  SeparatorControl,
   ShadowControl,
   SolidBackground,
   SortableControl,
@@ -26,7 +27,10 @@ import { updateData } from "../../../../../../bpl-tools/utils/functions";
 
 const Style = ({ attributes, setAttributes, device }) => {
 
-  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography, items, backgroundColor,shadow } = attributes;
+  const { boxValues, option, textColor, colors, cssCode, columns, border, image, width, typography, items, backgroundColor, shadow, Separator } = attributes;
+
+console.log(Separator);
+
 
 
   const resetValues = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -256,11 +260,11 @@ const Style = ({ attributes, setAttributes, device }) => {
           title={__("SolidBackground Components", "b-blocks")}
           initialOpen={false}
         >
-            <SolidBackground
-              label="Background Color"
-              value={backgroundColor}
-              onChange={(value) => setAttributes({ backgroundColor: value })}
-            />
+          <SolidBackground
+            label="Background Color"
+            value={backgroundColor}
+            onChange={(value) => setAttributes({ backgroundColor: value })}
+          />
         </PanelBody>
 
         <PanelBody
@@ -268,12 +272,106 @@ const Style = ({ attributes, setAttributes, device }) => {
           title={__("ShadowControl Components", "b-blocks")}
           initialOpen={false}
         >
-            <ShadowControl
-              label="Shadow"
-              value={shadow}
-              onChange={(shado)=>setAttributes({shadow:shado})}
-            />
+          <ShadowControl
+            label="Shadow"
+            value={shadow}
+            onChange={(shado) => setAttributes({ shadow: shado })}
+          />
         </PanelBody>
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("SeparatorControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+          <SeparatorControl 
+                  label={__('Separator')}
+                  value={Separator}
+                  onChange={(value)=>setAttributes({Separator:value})}/>
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
+        <PanelBody
+          className="bPlPanelBody"
+          title={__("ShadowControl Components", "b-blocks")}
+          initialOpen={false}
+        >
+
+
+        </PanelBody>
+
+
 
       </PanelBody>
 
